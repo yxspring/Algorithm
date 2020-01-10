@@ -10,6 +10,9 @@ import java.util.Scanner;
  * @Version: 1.0
  */
 public class MonkeyEatPeach {
+    /**
+     * method1 回溯算法
+    * */
     class TreeNode{
         int val;
         TreeNode left;
@@ -60,6 +63,15 @@ public class MonkeyEatPeach {
 
     public static void main(String[] args) {
         MonkeyEatPeach mp=new MonkeyEatPeach();
-        System.out.println(mp.test2());
+       // System.out.println(mp.test2());
+        Scanner in=new Scanner(System.in);
+        System.out.println(f(in.nextInt()));
+        // System.out.println(fx(in.nextInt()));
+    }
+    /**
+     * method 2:递归 一行代码
+     */
+    public  static long f(long n){
+        return n<=2?n:f(n-1)+f(n-2);
     }
 }
